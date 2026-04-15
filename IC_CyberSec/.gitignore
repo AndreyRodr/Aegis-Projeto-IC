@@ -1,0 +1,54 @@
+# ==============================================================================
+# 1. ARQUIVOS DE AMBIENTE E SEGURANÇA (CRÍTICO)
+# ==============================================================================
+# Nunca suba senhas, tokens ou chaves para o GitHub!
+.env
+.env.*
+!.env.exemplo
+
+# ==============================================================================
+# 2. SAÍDAS GERADAS AUTOMATICAMENTE (OUTPUTS)
+# ==============================================================================
+# O código deve ser capaz de recriar esses arquivos, não precisamos commitar
+graficos/
+dados/
+relatorios/
+*.log
+
+# ==============================================================================
+# 3. DADOS BRUTOS E LOGS LOCAIS
+# ==============================================================================
+# Evita subir datasets pesados do Kaggle e logs enormes do Nginx
+data/logs/
+data/payload_full.csv
+dataset_csic2010_limpo.csv
+
+# ==============================================================================
+# 4. PYTHON
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes Virtuais (se você decidir usar venv no futuro)
+venv/
+env/
+.venv/
+
+# ==============================================================================
+# 5. DOCKER E INFRAESTRUTURA
+# ==============================================================================
+# Caso o Docker mapeie volumes localmente, evitamos subir o banco de dados
+es_data/
+wazuh_data/
+grafana_data/
+
+# ==============================================================================
+# 6. SISTEMA OPERACIONAL E IDEs
+# ==============================================================================
+# Arquivos ocultos gerados pelo Windows/Mac ou editores (VSCode, PyCharm)
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
