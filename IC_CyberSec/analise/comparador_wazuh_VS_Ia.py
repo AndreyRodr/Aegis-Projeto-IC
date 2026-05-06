@@ -1,7 +1,5 @@
 """
 comparador_wazuh_VS_Ia.py — Análise comparativa de 4 quadrantes
-CORREÇÃO: cruzamento por user_agent (não IP, pois todo tráfego
-          Docker usa o mesmo IP gateway 172.18.0.1).
 
 Entradas: dados/resultados_ia_ambiente_controlado.csv
           dados/alertas_wazuh.csv

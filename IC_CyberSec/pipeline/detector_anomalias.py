@@ -30,7 +30,10 @@ CONFIG = {
 }
 
 FERRAMENTAS_UA  = ['nmap', 'sqlmap', 'burp', 'nikto', 'masscan', 'zgrab', 'nuclei']
-PAYLOADS_URL    = ['union select', '<script', '../', 'etc/passwd', 'cmd=', 'eval(']
+PAYLOADS_URL = [
+    'union select', '<script', '../', 'etc/passwd', 'cmd=', 'eval(', 
+    'or 1=1', '"="', 'alert(1)', 'system32'
+    ]
 ENDPOINTS_LOGIN = ['/rest/user/login', '/api/users', '/login', '/admin', '/auth']
 IPS_ATACANTES   = ["10.0.0.1", "10.0.0.2", "172.16.0.99", "185.220.101.5"] # Usado para o Ground Truth
 
